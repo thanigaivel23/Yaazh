@@ -24,8 +24,60 @@
 
 <body>
 
+
+    <!-- nav bar -->
+    <section id="" class="tw-fixed tw-top-0 tw-w-full tw-bg-white tw-z-10 tw-py-1 md:tw-py-2 tw-shadow-sm">
+        <nav
+            class="tw-flex tw-items-center tw-justify-center lg:tw-justify-between lg:tw-px-20 xl:tw-px-40 tw-relative  ">
+
+            <button class="tw-cursor-pointer lg:tw-hidden tw-absolute tw-left-5 md:tw-left-10" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <img src="./img/menu.png" alt="" class="tw-w-9 ">
+            </button>
+            <!-- drawer -->
+            <div class="offcanvas offcanvas-start tw-w-72" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header tw-flex tw-justify-end tw-pr-7 tw-pt-5">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body tw-pl-5 tw-text-lg">
+                    <p class="tw-py-2">Home</p>
+                    <p class="tw-py-2">Services</p>
+                    <div class="tw-py-2 tw-flex tw-items-center tw-gap-x-1">
+                        <p>Specializations</p>
+                        <img src="./img/downArrow.svg" alt="" class="tw-w-4 tw-h-4 tw-mt-1" />
+                    </div>
+                    <p class="tw-py-2">About</p>
+                    <p class="tw-py-2">Careers</p>
+
+                </div>
+            </div>
+
+            <a href="#comingTop">
+                <img src="./img/iogo.png" alt="" class="tw-w-44 md:tw-w-auto tw-ml-10">
+            </a>
+
+            <div class=" tw-hidden lg:tw-flex tw-items-center tw-gap-x-8">
+                <p>Home</p>
+                <p>Services</p>
+                <div class="tw-flex tw-items-center tw-gap-x-1">
+                    <p>Specializations</p>
+                    <img src="./img/downArrow.svg" alt="" class="tw-w-4 tw-h-4 tw-mt-1" />
+                </div>
+                <p>About</p>
+                <p>Careers</p>
+
+            </div>
+            <p class="tw-hidden lg:tw-inline tw-bg-[#4A51E0] tw-text-white tw-rounded-md tw-px-3 tw-py-2">
+                Contact Us
+            </p>
+        </nav>
+    </section>
+
     <!-- home -->
-    <main class="tw-flex tw-flex-col md:tw-flex-row tw-items-center lg:tw-w-[80%] tw-mx-auto tw-mt-10">
+    <main id="comingTop" class="tw-pt-28 tw-flex tw-flex-col md:tw-flex-row tw-items-center lg:tw-w-[80%] tw-mx-auto">
 
         <section class="tw-px-5 lg:tw-px-0 md:tw-mt-10 lg:tw-mt-20 md:tw-w-[60%] lg:tw-w-[40%]">
             <p class="tw-text-4xl tw-font-bold ">Web Development</p>
@@ -114,63 +166,81 @@
     </main>
 
     <!-- Footer -->
-    <main
-    class="tw-bg-[#4A51E0] tw-pt-20 md:tw-pt-40 tw-pb-10 tw-text-white tw-flex tw-flex-col md:tw-flex-row tw-px-5 xl:tw-px-40">
-    <section class="md:tw-w-[50%] tw-order-2 md:tw-order-1 tw-mt-10 sm:tw-mt-0">
-        <div class="tw-flex tw-gap-x-2">
-            <img src="./img/office1.png" alt="" class="tw-w-8 tw-h-7">
-            <p class="tw-pt-1 tw-text-sm tw-text-[#CBDCFE]">M/ 152, Thiruvalluvar Nagar 8th cross street,<br>
-                Thiruvanmiyur, Chennai, Tamil Nadu 600041</p>
+    <main class="tw-bg-[#4A51E0] tw-pt-10  tw-pb-10">
+
+
+        <div class="tw-flex tw-justify-start -tw-ml-7 tw-mb-10 xl:tw-px-40">
+            <img src="./img/logoW.png" alt="" class="tw-w-72">
         </div>
 
-        <div class="tw-flex tw-gap-x-2 tw-mt-4">
-            <img src="./img/office2.png" alt="" class="tw-w-8 tw-h-7">
-            <p class="tw-pt-1 tw-text-sm tw-text-[#CBDCFE] ">Yaazh Software Studio 223 Wall St #1090 <br>
-                Huntington, NY 11743</p>
+        <div class=" tw-text-white tw-flex tw-flex-col md:tw-flex-row tw-px-5 xl:tw-px-40">
+
+            <section class="md:tw-w-[50%] tw-order-2 md:tw-order-1 tw-mt-10 sm:tw-mt-0">
+                <div class="tw-flex tw-gap-x-2">
+                    <img src="./img/office1.png" alt="" class="tw-w-8 tw-h-7">
+                    <p class="tw-pt-1 tw-text-sm tw-text-[#CBDCFE]">M/ 152, Thiruvalluvar Nagar 8th cross street,<br>
+                        Thiruvanmiyur, Chennai, Tamil Nadu 600041</p>
+                </div>
+
+                <div class="tw-flex tw-gap-x-2 tw-mt-4">
+                    <img src="./img/office2.png" alt="" class="tw-w-8 tw-h-7">
+                    <p class="tw-pt-1 tw-text-sm tw-text-[#CBDCFE] ">Yaazh Software Studio 223 Wall St #1090 <br>
+                        Huntington, NY 11743</p>
+                </div>
+
+                <div class="tw-flex tw-gap-x-2 tw-mt-4">
+                    <img src="./img/phone.png" alt="" class="tw-w-8 tw-h-7">
+                    <p class="tw-pt-1 tw-text-sm underline ">+91 9884306108</p>
+                </div>
+
+                <div class="tw-flex tw-gap-x-2 tw-mt-4">
+                    <img src="./img/mail.png" alt="" class="tw-w-8 tw-h-7">
+                    <p class="tw-pt-1 tw-text-sm underline ">techteam@yaazh.in</p>
+                </div>
+
+                <p class="tw-text-[#CBDCFE] tw-mt-20">&#169; 2019 Yaazh Software Studio | All Rights Reserved</p>
+            </section>
+
+            <section
+                class="md:tw-w-[50%] tw-grid tw-grid-cols-2 sm:tw-grid-cols-3 tw-justify-center md:tw-justify-start tw-order-1 md:tw-order-2  ">
+                <div class="">
+                    <p class="tw-font-bold">Our Services</p>
+                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white"
+                            href="/DigitalMarketing.html">Digital Marketing</a></p>
+                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/UIDesign.html">UI/UX
+                            Design
+                        </a></p>
+                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/App.html">App Development
+                        </a></p>
+                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/Web.html">Web Development
+                        </a></p>
+                </div>
+
+                <div class=" tw-grid tw-justify-center md:tw-inline">
+                    <p class="tw-font-bold">Quick Links</p>
+                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/HomePage.html">About </a>
+                    </p>
+                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/ContactUs.html">Contact
+                            Us</a></p>
+                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/HomePage.html">Careers
+                        </a>
+                    </p>
+
+                </div>
+
+                <div class="tw-mt-10 sm:tw-mt-0 ">
+                    <p class="tw-font-bold">Social Media</p>
+                    <div class=" tw-flex tw-flex-wrap tw-mt-4 tw-gap-3">
+                        <img src="./img/fb.png" alt="" class="tw-w-8 tw-h-8">
+                        <img src="./img/linkedin.png" alt="" class="tw-w-8 tw-h-8">
+                        <img src="./img/insta.png" alt="" class="tw-w-8 tw-h-8">
+                        <img src="./img/wp.png" alt="" class="tw-w-8 tw-h-8">
+                    </div>
+                </div>
+            </section>
+
         </div>
-
-        <div class="tw-flex tw-gap-x-2 tw-mt-4">
-            <img src="./img/phone.png" alt="" class="tw-w-8 tw-h-7">
-            <p class="tw-pt-1 tw-text-sm underline ">+91 9884306108</p>
-        </div>
-
-        <div class="tw-flex tw-gap-x-2 tw-mt-4">
-            <img src="./img/mail.png" alt="" class="tw-w-8 tw-h-7">
-            <p class="tw-pt-1 tw-text-sm underline ">techteam@yaazh.in</p>
-        </div>
-
-        <p class="tw-text-[#CBDCFE] tw-mt-20">&#169; 2019 Yaazh Software Studio | All Rights Reserved</p>
-    </section>
-
-    <section
-        class="md:tw-w-[50%] tw-grid tw-grid-cols-2 sm:tw-grid-cols-3 tw-justify-center md:tw-justify-start tw-order-1 md:tw-order-2  ">
-        <div>
-            <p class="tw-font-bold">Our Services</p>
-            <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/DigitalMarketing.html">Digital Marketing</a></p>
-            <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/UIDesign.html">UI/UX Design </a></p>
-            <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/App.html">App Development </a></p>
-            <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/Web.html">Web Development </a></p>
-        </div>
-
-        <div class="">
-            <p class="tw-font-bold">Quick Links</p>
-            <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/HomePage.html">About </a></p>
-            <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/ContactUs.html">Contact Us</a></p>
-            <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/HomePage.html">Careers </a></p>
-
-        </div>
-
-        <div class="tw-mt-10 sm:tw-mt-0 ">
-            <p class="tw-font-bold">Social Media</p>
-            <div class=" tw-flex tw-flex-wrap tw-mt-4 tw-gap-3">
-                <img src="./img/fb.png" alt="" class="tw-w-8 tw-h-8">
-                <img src="./img/linkedin.png" alt="" class="tw-w-8 tw-h-8">
-                <img src="./img/insta.png" alt="" class="tw-w-8 tw-h-8">
-                <img src="./img/wp.png" alt="" class="tw-w-8 tw-h-8">
-            </div>
-        </div>
-    </section>
-</main>
+    </main>
 </body>
 
 </html>
