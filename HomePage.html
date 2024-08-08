@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yaazh</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -130,7 +131,7 @@
             diligently every day to provide services of impeccable quality</p>
 
         <main
-            class="tw-grid sm:tw-grid-cols-2 lg:tw-grid-cols-4 tw-justify-center tw-w-[90%] xl:tw-w-[80%] tw-mx-auto tw-mt-10 tw-gap-10">
+            class="tw-hidden sm:tw-grid sm:tw-grid-cols-2 lg:tw-grid-cols-4 tw-justify-center tw-w-[90%] xl:tw-w-[80%] tw-mx-auto tw-mt-10 tw-gap-10">
             <section class="tw-shadow-2xl tw-rounded-xl tw-text-center  tw-px-4 tw-py-10">
                 <img src="./img/marketing.png" alt="" class="tw-w-20 tw-py-5 tw-mx-auto">
                 <p class="tw-font-bold tw-text-lg">Digital Marketing</p>
@@ -173,6 +174,68 @@
             </section>
         </main>
 
+        <div id="carouselExample" class="sm:tw-hidden carousel slide tw-mt-10" data-bs-ride="carousel">
+            <div class="carousel-inner tw-w-[90%] tw-mx-auto tw-shadow-2xl">
+                <div class="carousel-item active">
+                    <section class="tw-shadow-2xl tw-rounded-xl tw-text-center  tw-px-4 tw-py-10">
+                        <img src="./img/marketing.png" alt="" class="tw-w-20 tw-py-5 tw-mx-auto">
+                        <p class="tw-font-bold tw-text-lg">Digital Marketing</p>
+                        <p class="tw-text-[#7F787C] tw-mt-5">SEO, SEM, SMM, Content Strategy, Campaign Outreach</p>
+                        <div class="tw-flex tw-items-center tw-justify-center tw-mt-11 tw-gap-x-1 ">
+                            <p>Learn More</p>
+                            <img src="./img/learnMore.png" class="" alt="">
+                        </div>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="tw-shadow-2xl tw-rounded-xl tw-text-center  tw-px-4 tw-py-10 ">
+                        <img src="./img/pink.png" alt="" class="tw-w-20 tw-py-5 tw-mx-auto">
+
+                        <p class="tw-font-bold tw-text-lg">UI/UX Design</p>
+                        <p class="tw-text-[#7F787C] tw-mt-5">Design Strategy, Interactive Prototype, Mobile & Web Design
+                        </p>
+                        <div class="tw-flex tw-items-center tw-justify-center tw-mt-5 tw-gap-x-1">
+                            <p>Learn More</p>
+                            <img src="./img/learnMore.png" class="" alt="">
+                        </div>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="tw-shadow-2xl tw-rounded-xl tw-text-center  tw-px-4 tw-py-10">
+                        <img src="./img/app.png" alt="" class="tw-w-20 tw-py-5 tw-pr-3 tw-mx-auto">
+                        <p class="tw-font-bold tw-text-lg">App Development</p>
+                        <p class="tw-text-[#7F787C] tw-mt-5">Android Development, IOS Development, Wearable Applications
+                        </p>
+                        <div class="tw-flex tw-items-center tw-justify-center tw-mt-5 tw-gap-x-1">
+                            <p>Learn More</p>
+                            <img src="./img/learnMore.png" class="" alt="">
+                        </div>
+                    </section>
+                </div>
+                <div class="carousel-item ">
+                    <section class="tw-rounded-xl tw-text-center tw-px-4 tw-py-10">
+                        <img src="./img/yellow.png" alt="" class="tw-w-20 tw-py-5 tw-mx-auto">
+                        <p class="tw-font-bold tw-text-lg">Web Development</p>
+                        <p class="tw-text-[#7F787C] tw-mt-5">Content Management System, eCommerce, Custom Web
+                            Application</p>
+                        <div class="tw-flex tw-items-center tw-justify-center tw-mt-5 tw-gap-x-1">
+                            <p>Learn More</p>
+                            <img src="./img/learnMore.png" class="" alt="">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <button class="carousel-control-prev  tw-w-[50%] tw-mx-auto " type="button"
+                data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="">Previous</span>
+            </button>
+            <button class="carousel-control-next tw-w-[20%] tw-mx-auto" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="">Next</span>
+            </button>
+        </div>
 
 
     </main>
@@ -253,81 +316,39 @@
     </main>
 
     <!-- Footer -->
-    <main class="tw-bg-[#4A51E0] tw-pt-10  tw-pb-10">
-
-
-        <div class="tw-flex tw-justify-start -tw-ml-7 tw-mb-10 xl:tw-px-40">
-            <img src="./img/logoW.png" alt="" class="tw-w-72">
-        </div>
-
-        <div class=" tw-text-white tw-flex tw-flex-col md:tw-flex-row tw-px-5 xl:tw-px-40">
-
-            <section class="md:tw-w-[50%] tw-order-2 md:tw-order-1 tw-mt-10 sm:tw-mt-0">
-                <div class="tw-flex tw-gap-x-2">
-                    <img src="./img/office1.png" alt="" class="tw-w-8 tw-h-7">
-                    <p class="tw-pt-1 tw-text-sm tw-text-[#CBDCFE]">M/ 152, Thiruvalluvar Nagar 8th cross street,<br>
-                        Thiruvanmiyur, Chennai, Tamil Nadu 600041</p>
-                </div>
-
-                <div class="tw-flex tw-gap-x-2 tw-mt-4">
-                    <img src="./img/office2.png" alt="" class="tw-w-8 tw-h-7">
-                    <p class="tw-pt-1 tw-text-sm tw-text-[#CBDCFE] ">Yaazh Software Studio 223 Wall St #1090 <br>
-                        Huntington, NY 11743</p>
-                </div>
-
-                <div class="tw-flex tw-gap-x-2 tw-mt-4">
-                    <img src="./img/phone.png" alt="" class="tw-w-8 tw-h-7">
-                    <p class="tw-pt-1 tw-text-sm underline ">+91 9884306108</p>
-                </div>
-
-                <div class="tw-flex tw-gap-x-2 tw-mt-4">
-                    <img src="./img/mail.png" alt="" class="tw-w-8 tw-h-7">
-                    <p class="tw-pt-1 tw-text-sm underline ">techteam@yaazh.in</p>
-                </div>
-
-                <p class="tw-text-[#CBDCFE] tw-mt-20">&#169; 2019 Yaazh Software Studio | All Rights Reserved</p>
-            </section>
-
-            <section
-                class="md:tw-w-[50%] tw-grid tw-grid-cols-2 sm:tw-grid-cols-3 tw-justify-center md:tw-justify-start tw-order-1 md:tw-order-2  ">
-                <div class="">
-                    <p class="tw-font-bold">Our Services</p>
-                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white"
-                            href="/DigitalMarketing.html">Digital Marketing</a></p>
-                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/UIDesign.html">UI/UX
-                            Design
-                        </a></p>
-                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/App.html">App Development
-                        </a></p>
-                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/Web.html">Web Development
-                        </a></p>
-                </div>
-
-                <div class=" tw-grid tw-justify-center md:tw-inline">
-                    <p class="tw-font-bold">Quick Links</p>
-                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/HomePage.html">About </a>
-                    </p>
-                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/ContactUs.html">Contact
-                            Us</a></p>
-                    <p class="tw-text-[#CBDCFE] tw-py-2"><a class="hover:tw-text-white" href="/HomePage.html">Careers
-                        </a>
-                    </p>
-
-                </div>
-
-                <div class="tw-mt-10 sm:tw-mt-0 ">
-                    <p class="tw-font-bold">Social Media</p>
-                    <div class=" tw-flex tw-flex-wrap tw-mt-4 tw-gap-3">
-                        <img src="./img/fb.png" alt="" class="tw-w-8 tw-h-8">
-                        <img src="./img/linkedin.png" alt="" class="tw-w-8 tw-h-8">
-                        <img src="./img/insta.png" alt="" class="tw-w-8 tw-h-8">
-                        <img src="./img/wp.png" alt="" class="tw-w-8 tw-h-8">
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </main>
+    <div w3-include-html="Footer.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
 
 </body>
 
