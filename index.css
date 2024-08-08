@@ -6,3 +6,7 @@
 .carousel-control-prev-icon {
     background-image: url(./img/careftarrow-50.png);
 }
+
+.error-message {
+    color: red;
+}

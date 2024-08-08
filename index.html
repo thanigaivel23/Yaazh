@@ -26,55 +26,40 @@
 <body>
 
     <!-- nav bar -->
-    <section id="" class="tw-fixed tw-top-0 tw-w-full tw-bg-white tw-z-10 tw-py-1 md:tw-py-2 tw-shadow-sm">
-        <nav
-            class="tw-flex tw-items-center tw-justify-center lg:tw-justify-between lg:tw-px-20 xl:tw-px-40 tw-relative  ">
-            <!-- res menu button -->
-            <button class="tw-cursor-pointer lg:tw-hidden tw-absolute tw-left-5 md:tw-left-10" type="button"
-                data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <img src="./img/menu.png" alt="" class="tw-w-9 ">
-            </button>
-            <!-- drawer -->
-            <div class="offcanvas offcanvas-start tw-w-72" tabindex="-1" id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header tw-flex tw-justify-end tw-pr-7 tw-pt-5">
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
+    <div w3-include-html="Header.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
 
-                <div class="offcanvas-body tw-pl-5 tw-text-lg">
-                    <p class="tw-py-2">Home</p>
-                    <p class="tw-py-2">Services</p>
-                    <div class="tw-py-2 tw-flex tw-items-center tw-gap-x-1">
-                        <p>Specializations</p>
-                        <img src="./img/downArrow.svg" alt="" class="tw-w-4 tw-h-4 tw-mt-1" />
-                    </div>
-                    <p class="tw-py-2">About</p>
-                    <p class="tw-py-2">Careers</p>
-
-                </div>
-            </div>
-
-            <a href="#comingTop">
-                <img src="./img/iogo.png" alt="" class="tw-w-44 md:tw-w-auto tw-ml-10">
-            </a>
-
-            <div class=" tw-hidden lg:tw-flex tw-items-center tw-gap-x-8">
-                <p>Home</p>
-                <p>Services</p>
-                <div class="tw-flex tw-items-center tw-gap-x-1">
-                    <p>Specializations</p>
-                    <img src="./img/downArrow.svg" alt="" class="tw-w-4 tw-h-4 tw-mt-1" />
-                </div>
-                <p>About</p>
-                <p>Careers</p>
-
-            </div>
-            <p class="tw-hidden lg:tw-inline tw-bg-[#4A51E0] tw-text-white tw-rounded-md tw-px-3 tw-py-2">
-                Contact Us
-            </p>
-        </nav>
-    </section>
 
     <!-- home -->
     <main id="comingTop"
@@ -130,6 +115,7 @@
             strictly adhere to all rules for creating digital products, making breakthroughs possible. We work
             diligently every day to provide services of impeccable quality</p>
 
+        <!-- laptop  -->
         <main
             class="tw-hidden sm:tw-grid sm:tw-grid-cols-2 lg:tw-grid-cols-4 tw-justify-center tw-w-[90%] xl:tw-w-[80%] tw-mx-auto tw-mt-10 tw-gap-10">
             <section class="tw-shadow-2xl tw-rounded-xl tw-text-center  tw-px-4 tw-py-10">
@@ -174,10 +160,11 @@
             </section>
         </main>
 
+        <!-- res carousel -->
         <div id="carouselExample" class="sm:tw-hidden carousel slide tw-mt-10" data-bs-ride="carousel">
             <div class="carousel-inner tw-w-[90%] tw-mx-auto tw-shadow-2xl">
                 <div class="carousel-item active">
-                    <section class="tw-shadow-2xl tw-rounded-xl tw-text-center  tw-px-4 tw-py-10">
+                    <section class=" tw-rounded-xl tw-text-center  tw-px-4 tw-py-10">
                         <img src="./img/marketing.png" alt="" class="tw-w-20 tw-py-5 tw-mx-auto">
                         <p class="tw-font-bold tw-text-lg">Digital Marketing</p>
                         <p class="tw-text-[#7F787C] tw-mt-5">SEO, SEM, SMM, Content Strategy, Campaign Outreach</p>
@@ -188,7 +175,7 @@
                     </section>
                 </div>
                 <div class="carousel-item">
-                    <section class="tw-shadow-2xl tw-rounded-xl tw-text-center  tw-px-4 tw-py-10 ">
+                    <section class=" tw-rounded-xl tw-text-center  tw-px-4 tw-py-10 ">
                         <img src="./img/pink.png" alt="" class="tw-w-20 tw-py-5 tw-mx-auto">
 
                         <p class="tw-font-bold tw-text-lg">UI/UX Design</p>
@@ -201,7 +188,7 @@
                     </section>
                 </div>
                 <div class="carousel-item">
-                    <section class="tw-shadow-2xl tw-rounded-xl tw-text-center  tw-px-4 tw-py-10">
+                    <section class=" tw-rounded-xl tw-text-center  tw-px-4 tw-py-10">
                         <img src="./img/app.png" alt="" class="tw-w-20 tw-py-5 tw-pr-3 tw-mx-auto">
                         <p class="tw-font-bold tw-text-lg">App Development</p>
                         <p class="tw-text-[#7F787C] tw-mt-5">Android Development, IOS Development, Wearable Applications
@@ -263,9 +250,9 @@
             At Yaazh, we create intuitive
             prototypes to enhance
             customer experience. We simplify your idea, apply our expertise, and ensure your concept stands out.</p>
-
+        <!-- lap scr -->
         <main
-            class="tw-flex tw-flex-col md:tw-flex-row tw-justify-center tw-px-5 lg:tw-w-[90%] xl:tw-w-[80%] tw-mx-auto tw-mt-10 tw-gap-x-10">
+            class="tw-hidden md:tw-flex tw-justify-center tw-px-5 lg:tw-w-[90%] xl:tw-w-[80%] tw-mx-auto tw-mt-10 tw-gap-x-10">
 
             <section class="tw-shadow-2xl tw-rounded-xl tw-text-center tw-px-4 tw-py-10 md:tw-w-[33%] ">
                 <img src="./img/blue.png" alt="" class="tw-w-16 tw-py-5 tw-mx-auto">
@@ -291,6 +278,51 @@
             </section>
 
         </main>
+
+        <!-- res carousel -->
+        <div id="carouselExample" class="md:tw-hidden carousel slide tw-mt-10" data-bs-ride="carousel">
+            <div class="carousel-inner tw-w-[90%] tw-mx-auto tw-shadow-2xl">
+                <div class="carousel-item active">
+                    <section class=" tw-rounded-xl tw-text-center tw-px-4 tw-py-10 md:tw-w-[33%] ">
+                        <img src="./img/blue.png" alt="" class="tw-w-16 tw-py-5 tw-mx-auto">
+                        <p class="tw-font-bold tw-text-lg">Customer-Centric Design</p>
+                        <p class="tw-text-[#7F787C] tw-mt-5">We prioritize customer experience and satisfaction by
+                            understanding
+                            and
+                            solving their problems.</p>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class=" tw-rounded-xl tw-text-center tw-px-4 tw-py-10 md:tw-w-[33%]">
+                        <img src="./img/orange.png" alt="" class="tw-w-16 tw-py-4 tw-mx-auto">
+                        <p class="tw-font-bold tw-text-lg">Collaborative Process</p>
+                        <p class="tw-text-[#7F787C] tw-mt-5">We collaborate closely to grasp your ideas and apply our
+                            expertise
+                            effectively.</p>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class=" tw-rounded-xl tw-text-center tw-px-4 tw-py-10 md:tw-w-[33%]">
+                        <img src="./img/green.png" alt="" class="tw-w-16 tw-py-6 tw-mx-auto">
+                        <p class="tw-font-bold tw-text-lg">Dedicated Team</p>
+                        <p class="tw-text-[#7F787C] tw-mt-5">Our skilled team ensures your idea stands out with
+                            exceptional
+                            quality
+                            and creativity.</p>
+                    </section>
+                </div>
+            </div>
+            <button class="carousel-control-prev  tw-w-[50%] tw-mx-auto " type="button"
+                data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="">Previous</span>
+            </button>
+            <button class="carousel-control-next tw-w-[20%] tw-mx-auto" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="">Next</span>
+            </button>
+        </div>
 
     </main>
 
